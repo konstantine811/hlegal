@@ -1,0 +1,40 @@
+.section-gradient {
+  min-height: 100vh;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  margin-bottom: 20px;
+  &__shadow {
+    position: absolute;
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    &_1 {
+      bottom: -10px;
+      width: calc(100% - 40px);
+      background-color: $c-grey-550;
+      left: 20px;
+    }
+    &_2 {
+      bottom: -20px;
+      width: calc(100% - 80px);
+      left: 40px;
+      background-color: $c-grey-450;
+    }
+  }
+}
+
+.main-wrap {
+  min-height: 100vh;
+  position: relative;
+  &__bg {
+    position: absolute;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+    &-object {
+      position: absolute;
+      height: 100%;
+    }
+  }
+}

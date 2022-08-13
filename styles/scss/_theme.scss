@@ -1,0 +1,13 @@
+.theme-dark {
+  background: $gradient-supersoft;
+  .txt-primary {
+    color: $c-white;
+  }
+}
+
+.theme-light {
+  background-color: $c-white;
+  .txt-primary {
+    color: $c-indigo;
+  }
+}

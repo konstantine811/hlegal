@@ -1,3 +1,11 @@
+/* $txt-exsm: rem(12);
+$txt-sm: rem(15); */
+/* $txt-exmd: rem(18);
+$txt-md: rem(20);
+$txt-lg: rem(25);
+$txt-exlg: rem(30); */
+/* $h5: rem(25); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 html,
 body,
 div,
@@ -133,310 +141,66 @@ table {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Graphik LCG";
-  src: url("../assets/fonts/GraphikLCG/GraphikLCG-Regular.eot");
-  src: url("../assets/fonts/GraphikLCG/GraphikLCG-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/GraphikLCG/GraphikLCG-Regular.woff2") format("woff2"), url("../assets/fonts/GraphikLCG/GraphikLCG-Regular.woff") format("woff"), url("../assets/fonts/GraphikLCG/GraphikLCG-Regular.ttf") format("truetype"), url("../assets/fonts/GraphikLCG/GraphikLCG-Regular.svg#GraphikLCG-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+/* $path: "../assets/fonts/GraphikLCG";
+$fontGraphic: "Graphik LCG";
+
+@include font-face($fontGraphic, "GraphikLCG-Regular", $path);
+@include font-face($fontGraphic, "GraphikLCG-Semibold", $path, 600); */
+.theme-dark {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
 }
-@font-face {
-  font-family: "Graphik LCG";
-  src: url("../assets/fonts/GraphikLCG/GraphikLCG-Semibold.eot");
-  src: url("../assets/fonts/GraphikLCG/GraphikLCG-Semibold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/GraphikLCG/GraphikLCG-Semibold.woff2") format("woff2"), url("../assets/fonts/GraphikLCG/GraphikLCG-Semibold.woff") format("woff"), url("../assets/fonts/GraphikLCG/GraphikLCG-Semibold.ttf") format("truetype"), url("../assets/fonts/GraphikLCG/GraphikLCG-Semibold.svg#GraphikLCG-Semibold") format("svg");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-.container-lg {
-  max-width: 1368px;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+.theme-dark .txt-primary {
+  color: #ffffff;
 }
 
-.container-sm {
-  max-width: 1320px;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+.theme-light {
+  background-color: #ffffff;
+}
+.theme-light .txt-primary {
+  color: #323264;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px -15px 0;
-}
-
-.col {
-  flex-basis: 0;
-  flex-grow: 1;
-  padding: 15px 15px 0;
-}
-
-.col-1 {
-  flex: 0 0 auto;
-  width: 8.3333333333%;
-  padding: 15px 15px 0;
-}
-
-.col-2 {
-  flex: 0 0 auto;
-  width: 16.6666666667%;
-  padding: 15px 15px 0;
-}
-
-.col-3 {
-  flex: 0 0 auto;
-  width: 25%;
-  padding: 15px 15px 0;
-}
-
-.col-4 {
-  flex: 0 0 auto;
-  width: 33.3333333333%;
-  padding: 15px 15px 0;
-}
-
-.col-5 {
-  flex: 0 0 auto;
-  width: 41.6666666667%;
-  padding: 15px 15px 0;
-}
-
-.col-6 {
-  flex: 0 0 auto;
-  width: 50%;
-  padding: 15px 15px 0;
-}
-
-.col-7 {
-  flex: 0 0 auto;
-  width: 58.3333333333%;
-  padding: 15px 15px 0;
-}
-
-.col-8 {
-  flex: 0 0 auto;
-  width: 66.6666666667%;
-  padding: 15px 15px 0;
-}
-
-.col-9 {
-  flex: 0 0 auto;
-  width: 75%;
-  padding: 15px 15px 0;
-}
-
-.col-10 {
-  flex: 0 0 auto;
-  width: 83.3333333333%;
-  padding: 15px 15px 0;
-}
-
-.col-11 {
-  flex: 0 0 auto;
-  width: 91.6666666667%;
-  padding: 15px 15px 0;
-}
-
-.col-12 {
-  flex: 0 0 auto;
-  width: 100%;
-  padding: 15px 15px 0;
-}
-
-@media all and (min-width: 576px) {
-  .col-sm-1 {
-    flex: 0 0 auto;
-    width: 8.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-2 {
-    flex: 0 0 auto;
-    width: 16.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-3 {
-    flex: 0 0 auto;
-    width: 25%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-4 {
-    flex: 0 0 auto;
-    width: 33.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-5 {
-    flex: 0 0 auto;
-    width: 41.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-6 {
-    flex: 0 0 auto;
-    width: 50%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-7 {
-    flex: 0 0 auto;
-    width: 58.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-8 {
-    flex: 0 0 auto;
-    width: 66.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-9 {
-    flex: 0 0 auto;
-    width: 75%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-10 {
-    flex: 0 0 auto;
-    width: 83.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-11 {
-    flex: 0 0 auto;
-    width: 91.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-sm-12 {
-    flex: 0 0 auto;
-    width: 100%;
-    padding: 15px 15px 0;
-  }
-}
-@media all and (min-width: 768px) {
-  .col-md-1 {
-    flex: 0 0 auto;
-    width: 8.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-md-2 {
-    flex: 0 0 auto;
-    width: 16.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-md-3 {
-    flex: 0 0 auto;
-    width: 25%;
-    padding: 15px 15px 0;
-  }
-  .col-md-4 {
-    flex: 0 0 auto;
-    width: 33.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-md-5 {
-    flex: 0 0 auto;
-    width: 41.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-md-6 {
-    flex: 0 0 auto;
-    width: 50%;
-    padding: 15px 15px 0;
-  }
-  .col-md-7 {
-    flex: 0 0 auto;
-    width: 58.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-md-8 {
-    flex: 0 0 auto;
-    width: 66.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-md-9 {
-    flex: 0 0 auto;
-    width: 75%;
-    padding: 15px 15px 0;
-  }
-  .col-md-10 {
-    flex: 0 0 auto;
-    width: 83.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-md-11 {
-    flex: 0 0 auto;
-    width: 91.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-md-12 {
-    flex: 0 0 auto;
-    width: 100%;
-    padding: 15px 15px 0;
-  }
-}
-@media all and (min-width: 1200px) {
-  .col-lg-1 {
-    flex: 0 0 auto;
-    width: 8.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-2 {
-    flex: 0 0 auto;
-    width: 16.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-3 {
-    flex: 0 0 auto;
-    width: 25%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-4 {
-    flex: 0 0 auto;
-    width: 33.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-5 {
-    flex: 0 0 auto;
-    width: 41.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-6 {
-    flex: 0 0 auto;
-    width: 50%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-7 {
-    flex: 0 0 auto;
-    width: 58.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-8 {
-    flex: 0 0 auto;
-    width: 66.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-9 {
-    flex: 0 0 auto;
-    width: 75%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-10 {
-    flex: 0 0 auto;
-    width: 83.3333333333%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-11 {
-    flex: 0 0 auto;
-    width: 91.6666666667%;
-    padding: 15px 15px 0;
-  }
-  .col-lg-12 {
-    flex: 0 0 auto;
-    width: 100%;
-    padding: 15px 15px 0;
-  }
-}
 html {
   font-family: "Graphik LCG", sans-serif;
+}
+
+.section-gradient {
+  min-height: 100vh;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.section-gradient__shadow {
+  position: absolute;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+}
+.section-gradient__shadow_1 {
+  bottom: -10px;
+  width: calc(100% - 40px);
+  background-color: #cacadb;
+  left: 20px;
+}
+.section-gradient__shadow_2 {
+  bottom: -20px;
+  width: calc(100% - 80px);
+  left: 40px;
+  background-color: #e7e7f2;
+}
+
+.main-wrap {
+  min-height: 100vh;
+  position: relative;
+}
+.main-wrap__bg {
+  position: absolute;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+.main-wrap__bg-object {
+  position: absolute;
+  height: 100%;
 }

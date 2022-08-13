@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @mixin font-face($name, $font-type, $path, $weight: normal, $style: normal) {
   $eot: "eot";
   $eotFix: "eot?#iefix";
@@ -19,8 +20,8 @@
     font-display: swap;
   }
 }
-$path: "../assets/fonts/GraphikLCG";
+/* $path: "../assets/fonts/GraphikLCG";
 $fontGraphic: "Graphik LCG";
 
 @include font-face($fontGraphic, "GraphikLCG-Regular", $path);
-@include font-face($fontGraphic, "GraphikLCG-Semibold", $path, 600);
+@include font-face($fontGraphic, "GraphikLCG-Semibold", $path, 600); */
