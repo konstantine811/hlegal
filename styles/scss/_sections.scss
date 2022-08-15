@@ -45,3 +45,39 @@
     justify-content: space-between;
   }
 }
+
+.main-header {
+  border: 1px solid black;
+  padding: 5px;
+  color: white;
+  display: grid;
+  column-gap: 20px;
+  grid-template-areas: "info" "logo" "nav";
+  @media screen and (min-width: $md) {
+    grid-template-areas: "logo info" "logo nav";
+  }
+  &__logo,
+  &__info,
+  &__nav {
+    padding: 20px;
+  }
+  &__logo {
+    border: 1px solid white;
+    grid-area: logo;
+  }
+  &__info {
+    border: 1px solid red;
+    grid-area: info;
+  }
+  &__nav {
+    border: 1px solid green;
+    grid-area: nav;
+  }
+  &__info,
+  &__nav {
+    justify-self: start;
+    @media screen and (min-width: $md) {
+      justify-self: end;
+    }
+  }
+}
