@@ -204,3 +204,10 @@ html {
   position: absolute;
   height: 100%;
 }
+.main-wrap__content {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -37,4 +37,11 @@
       height: 100%;
     }
   }
+  &__content {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
