@@ -165,7 +165,9 @@ html {
 }
 
 .section-gradient {
-  min-height: 100vh;
+  min-height: calc(
+  100vh - 20px
+);
   border-radius: 0 0 12px 12px;
   position: relative;
   margin-bottom: 20px;
@@ -184,12 +186,14 @@ html {
 .section-gradient__shadow_2 {
   bottom: -20px;
   width: calc(100% - 80px);
-  left: 40px;
   background-color: #e7e7f2;
+  left: 40px;
 }
 
 .main-wrap {
-  min-height: 100vh;
+  min-height: calc(
+  100vh - 20px
+);
   position: relative;
 }
 .main-wrap__bg {
@@ -203,4 +207,51 @@ html {
 .main-wrap__bg-object {
   position: absolute;
   height: 100%;
+}
+.main-wrap__content {
+  position: relative;
+  min-height: calc(
+  100vh - 20px
+);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-header {
+  border: 1px solid black;
+  padding: 5px;
+  color: white;
+  display: grid;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  grid-template-areas: "info" "logo" "nav";
+}
+@media screen and (min-width: 768px) {
+  .main-header {
+    grid-template-areas: "logo info" "logo nav";
+  }
+}
+.main-header__logo, .main-header__info, .main-header__nav {
+  padding: 20px;
+}
+.main-header__logo {
+  border: 1px solid white;
+  grid-area: logo;
+}
+.main-header__info {
+  border: 1px solid red;
+  grid-area: info;
+}
+.main-header__nav {
+  border: 1px solid green;
+  grid-area: nav;
+}
+.main-header__info, .main-header__nav {
+  justify-self: start;
+}
+@media screen and (min-width: 768px) {
+  .main-header__info, .main-header__nav {
+    justify-self: end;
+  }
 }
