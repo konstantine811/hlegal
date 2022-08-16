@@ -1,18 +1,22 @@
 $container-lg: 1338px;
 $container-md: 1290px;
 $container-padding-x: 15px;
-$sm: 576px;
-$md: 768px;
-$lg: 1200px;
+$exsm: 368px;
+$sm: 768px;
+$md: 1024px;
+$lg: 1440px;
+$exlg: 1920px;
 $gutter-col: 15px;
 $grid-col-count: 12;
 $grid-col-size: math.div(100%, $grid-col-count);
 
 // text size
-/* $txt-exsm: rem(12);
+/* 
 $txt-sm: rem(15); */
+$txt-exsm: rem(12);
 $txt-normal: rem(16);
-/* $txt-exmd: rem(18);
+$txt-exmd: rem(19);
+/* 
 $txt-md: rem(20);
 $txt-lg: rem(25);
 $txt-exlg: rem(30); */
