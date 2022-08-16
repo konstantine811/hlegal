@@ -1,29 +1,33 @@
+$all-screen: 100vh;
+$count-shadow-step: 2;
+$height-shadow-step: 10;
+$screen-height-shadow-step: calc(
+  #{$all-screen} - #{$height-shadow-step * $count-shadow-step}px
+);
+$color-shadow-step-collection: ($c-grey-550, $c-grey-450);
+
 .section-gradient {
-  min-height: 100vh;
+  min-height: $screen-height-shadow-step;
   border-radius: 0 0 12px 12px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: #{$height-shadow-step * $count-shadow-step}px;
   &__shadow {
     position: absolute;
     height: 10px;
     border-radius: 0 0 12px 12px;
-    &_1 {
-      bottom: -10px;
-      width: calc(100% - 40px);
-      background-color: $c-grey-550;
-      left: 20px;
-    }
-    &_2 {
-      bottom: -20px;
-      width: calc(100% - 80px);
-      left: 40px;
-      background-color: $c-grey-450;
+    @for $i from 1 through $count-shadow-step {
+      &_#{$i} {
+        bottom: -#{$height-shadow-step * $i}px;
+        width: calc(100% - #{40 * $i}px);
+        background-color: nth($color-shadow-step-collection, $i);
+        left: #{20 * $i}px;
+      }
     }
   }
 }
 
 .main-wrap {
-  min-height: 100vh;
+  min-height: $screen-height-shadow-step;
   position: relative;
   &__bg {
     position: absolute;
@@ -39,7 +43,7 @@
   }
   &__content {
     position: relative;
-    min-height: 100vh;
+    min-height: $screen-height-shadow-step;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
